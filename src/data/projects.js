@@ -112,8 +112,8 @@ export const projects = [
       'IA',
     ],
 
-    url: null,
-    demoUrl: null,
+    url: 'https://adastra-sky.vercel.app/',
+    demoUrl: 'https://adastra-sky.vercel.app/',
     hasDemo: false,
 
     objective:

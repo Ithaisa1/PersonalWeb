@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AdAstraSky — Vista previa</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="stars" id="stars"></div>
+
+  <header class="topbar">
+    <div class="wordmark">
+      <span class="wordmark-dot"></span>
+      AdAstraSky
+    </div>
+    <span class="topbar-tag">Vista previa</span>
+  </header>
+
+  <main class="content-container">
+
+    <section class="hero">
+      <h1>¿Dónde está el cielo más oscuro<br class="br-desktop"> esta noche?</h1>
+      <p class="hero-sub">Elige una isla y descubre las mejores zonas para observar las estrellas, ahora mismo.</p>
+    </section>
+
+    <nav class="island-picker" id="islandPicker" aria-label="Selector de isla"></nav>
+
+    <section class="today-panel" id="todayPanel">
+      <div class="today-col">
+        <span class="today-label">Cielo de hoy</span>
+        <div class="today-main">
+          <span class="today-temp" id="todayTemp">—</span>
+          <span class="today-cloud" id="todayCloud">—</span>
+        </div>
+        <p class="today-note" id="todayNote">—</p>
+      </div>
+      <div class="today-col">
+        <span class="today-label">Constelaciones visibles</span>
+        <div class="constellation-chips" id="constellationChips"></div>
+      </div>
+    </section>
+
+    <section class="zones-section">
+      <div class="zones-heading">
+        <span class="zones-label">Zonas destacadas</span>
+        <span class="zones-island" id="zonesIslandName">—</span>
+      </div>
+      <div class="zones-grid" id="zonesGrid"></div>
+    </section>
+
+    <section class="cta">
+      <p class="cta-copy">Esto es solo un vistazo. Explora mapas interactivos, escala Bortle, accesibilidad y mucho más en la plataforma completa.</p>
+      <a class="cta-button" href="https://adastra-sky.vercel.app" target="_blank" rel="noopener">
+        Explorar la app completa
+        <span class="cta-arrow">→</span>
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span>AdAstraSky · Astroturismo inteligente en Canarias</span>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
