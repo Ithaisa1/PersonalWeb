@@ -7,12 +7,12 @@ export default function Footer() {
 
   return (
     <footer>
-      <div className="footer-logo">ISG<span>Digital</span></div>
+      <div className="footer-logo nav-logo-animated">ISG<span>Digital</span></div>
       <p>© 2026 ISG Digital – Diseño &amp; Desarrollo Web</p>
       <div className="footer-links">
-        <a href="#about" onClick={(e) => handleClick(e, '#about')}>Sobre mí</a>
-        <a href="#projects" onClick={(e) => handleClick(e, '#projects')}>Proyectos</a>
-        <a href="#contact" onClick={(e) => handleClick(e, '#contact')}>Contacto</a>
+        <a href="#about" className="nav-link-underline" onClick={(e) => handleClick(e, '#about')}>Sobre mí</a>
+        <a href="#projects" className="nav-link-underline" onClick={(e) => handleClick(e, '#projects')}>Proyectos</a>
+        <a href="#contact" className="nav-link-underline" onClick={(e) => handleClick(e, '#contact')}>Contacto</a>
         <a href="https://www.linkedin.com/in/ithaisa-sg" target="_blank" rel="noopener noreferrer" title="LinkedIn">
           <svg width="18" height="18" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
             <rect width="34" height="34" rx="4" fill="#0A66C2" />

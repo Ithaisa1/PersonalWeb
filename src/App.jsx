@@ -1,31 +1,27 @@
-import { useEffect } from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-import Skills from './components/Skills'
-import Experience from './components/Experience'
-import Projects from './components/Projects'
-import Testimonials from './components/Testimonials'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import { initEmailJS } from './services/emailjs'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+import Home from './pages/Home'
+import ProjectDetail from './pages/ProjectDetail'
+import Demo from './pages/Demo'
 
 export default function App() {
-  useEffect(() => {
-    initEmailJS()
-  }, [])
-
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Testimonials />
-      <Contact />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+
+        <Route path="/" element={<Home />} />
+
+        <Route
+          path="/proyectos/:id"
+          element={<ProjectDetail />}
+        />
+
+        <Route
+          path="/demos/:id"
+          element={<Demo />}
+        />
+
+      </Routes>
+    </BrowserRouter>
   )
 }

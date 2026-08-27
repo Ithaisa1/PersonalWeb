@@ -1,0 +1,724 @@
+/* =========================================================
+   PROJECT DETAIL
+========================================================= */
+
+.project-detail {
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-detail-container {
+  width: 100%;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.project-detail-hero {
+  min-height: 70vh;
+  padding: 140px 6vw 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.project-detail-icon {
+  width: 100px;
+  height: 100px;
+  margin: 30px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 24px;
+  font-size: 3.5rem;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.15);
+
+  backdrop-filter: blur(12px);
+}
+
+.project-detail-category {
+  margin-bottom: 18px;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  opacity: 0.55;
+}
+
+.project-detail-hero h1 {
+  margin: 0;
+
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.project-detail-description {
+  max-width: 700px;
+  margin: 30px auto 0;
+
+  font-size: 1.15rem;
+  line-height: 1.7;
+
+  opacity: 0.7;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.project-detail-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+
+  margin-top: 40px;
+}
+
+.project-detail-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  padding: 13px 24px;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.project-detail-button:hover {
+  transform: translateY(-3px);
+}
+
+.project-detail-button.primary {
+  background: rgba(255, 255, 255, 0.95);
+  color: #111;
+}
+
+.project-detail-button.primary:hover {
+  opacity: 0.85;
+}
+
+.project-detail-button.secondary {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  color: inherit;
+}
+
+.project-detail-button.secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* =========================================================
+   PROJECT META
+========================================================= */
+
+.project-detail-info {
+  width: min(1100px, 88%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 60px;
+
+  padding: 50px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-info-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.project-info-card h2 {
+  margin: 0;
+
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.project-info-label {
+  display: block;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  opacity: 0.5;
+}
+
+/* =========================================================
+   TECHNOLOGIES
+========================================================= */
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-tech {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 8px 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+
+  font-size: 0.85rem;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.project-tech:hover {
+  transform: translateY(-2px);
+
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* =========================================================
+   IMAGES / GALLERY
+========================================================= */
+
+.project-detail-gallery {
+  width: min(1200px, 90%);
+  margin: 100px auto;
+
+  display: flex;
+  justify-content: center;
+}
+
+.project-detail-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.2);
+}
+
+.project-detail-image-main {
+  max-height: 700px;
+  object-fit: cover;
+}
+
+.project-detail-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.project-detail-gallery-grid .project-detail-image {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================================================
+   CASE STUDY
+========================================================= */
+
+.project-case-study {
+  width: min(1100px, 88%);
+  margin: 150px auto 100px;
+}
+
+/* ---------------------------------------------------------
+   Case study header
+--------------------------------------------------------- */
+
+.project-case-study-header {
+  position: relative;
+
+  margin-bottom: 70px;
+  padding: 45px 50px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.07),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.12);
+
+  overflow: hidden;
+}
+
+/* pequeño detalle visual */
+
+.project-case-study-header::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.project-case-study-header .project-info-label {
+  margin-bottom: 18px;
+
+  opacity: 0.7;
+}
+
+.project-case-study-header h2 {
+  margin: 0;
+
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.project-case-study-header p {
+  max-width: 650px;
+
+  margin: 22px 0 0;
+
+  font-size: 1.05rem;
+  line-height: 1.7;
+
+  opacity: 0.6;
+}
+
+/* ---------------------------------------------------------
+   Case study content
+--------------------------------------------------------- */
+
+.project-case-study-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------------------------------------------------------
+   Individual case study item
+--------------------------------------------------------- */
+
+.project-case-study-content article {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 35px;
+
+  padding: 55px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  transition:
+    padding 0.3s ease,
+    transform 0.3s ease;
+}
+
+.project-case-study-content article:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* número */
+
+.project-case-number {
+  display: flex;
+  align-items: flex-start;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+
+  opacity: 0.35;
+}
+
+/* contenido */
+
+.project-case-study-content article > div {
+  max-width: 750px;
+}
+
+.project-case-study-content article .project-info-label {
+  margin-bottom: 12px;
+}
+
+.project-case-study-content article h3 {
+  margin: 0 0 18px;
+
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.project-case-study-content article p {
+  margin: 0;
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+
+  opacity: 0.68;
+}
+
+/* pequeño movimiento al pasar por cada bloque */
+
+.project-case-study-content article:hover {
+  padding-left: 10px;
+}
+
+.project-case-study-content article:hover .project-case-number {
+  opacity: 0.8;
+}
+
+/* =========================================================
+   OLD CASE STUDY SECTIONS
+   Se mantienen por compatibilidad con otros componentes
+========================================================= */
+
+.project-detail-section {
+  width: min(1100px, 88%);
+  margin: 150px auto;
+
+  display: grid;
+  grid-template-columns: 0.35fr 1fr;
+  gap: 80px;
+}
+
+.project-section-content {
+  max-width: 750px;
+}
+
+.project-section-content h2 {
+  margin: 0 0 25px;
+
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.project-section-content p {
+  margin: 0;
+
+  font-size: 1.1rem;
+  line-height: 1.8;
+
+  opacity: 0.72;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.project-detail-action {
+  width: min(1100px, 88%);
+  margin: 160px auto 100px;
+
+  padding-top: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-detail-action .project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 24px;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.project-detail-action .project-link:hover {
+  transform: translateY(-3px);
+  opacity: 0.8;
+}
+
+.project-back {
+  text-decoration: none;
+
+  opacity: 0.65;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.project-back:hover {
+  opacity: 1;
+  transform: translateX(-4px);
+}
+
+/* =========================================================
+   BACK LINK
+========================================================= */
+
+.back-link {
+  position: absolute;
+
+  top: 30px;
+  left: 6vw;
+
+  z-index: 10;
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+
+  opacity: 0.55;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.back-link:hover {
+  opacity: 1;
+  transform: translateX(-4px);
+}
+
+/* =========================================================
+   404
+========================================================= */
+
+.project-not-found {
+  min-height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.project-not-found h1 {
+  margin: 20px 0 10px;
+}
+
+.project-not-found p {
+  margin-bottom: 30px;
+
+  opacity: 0.7;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .project-detail-hero {
+    min-height: 60vh;
+    padding: 120px 7vw 80px;
+  }
+
+  .project-detail-icon {
+    width: 80px;
+    height: 80px;
+
+    font-size: 2.8rem;
+  }
+
+  .project-detail-actions {
+    flex-direction: column;
+  }
+
+  .project-detail-button {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .project-detail-info {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* CASE STUDY */
+
+  .project-case-study {
+    margin: 100px auto 80px;
+  }
+
+  .project-case-study-header {
+    padding: 35px 30px;
+    margin-bottom: 50px;
+  }
+
+  .project-case-study-content article {
+    grid-template-columns: 50px 1fr;
+    gap: 20px;
+
+    padding: 45px 0;
+  }
+
+  .project-case-study-content article:hover {
+    padding-left: 0;
+  }
+
+  /* OLD SECTIONS */
+
+  .project-detail-section {
+    grid-template-columns: 1fr;
+    gap: 25px;
+
+    margin: 100px auto;
+  }
+
+  .project-detail-gallery {
+    margin: 70px auto;
+  }
+
+  .project-detail-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-detail-action {
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-top: 100px;
+  }
+
+  .back-link {
+    left: 7vw;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .project-detail-hero {
+    padding: 100px 6vw 60px;
+  }
+
+  .project-detail-hero h1 {
+    font-size: 3rem;
+  }
+
+  .project-detail-description {
+    font-size: 1rem;
+  }
+
+  .project-detail-actions {
+    width: 100%;
+  }
+
+  .project-detail-button {
+    max-width: none;
+  }
+
+  /* CASE STUDY */
+
+  .project-case-study {
+    width: 88%;
+    margin: 80px auto 60px;
+  }
+
+  .project-case-study-header {
+    padding: 30px 24px;
+    border-radius: 22px;
+  }
+
+  .project-case-study-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .project-case-study-header p {
+    font-size: 0.95rem;
+  }
+
+  .project-case-study-content article {
+    grid-template-columns: 1fr;
+    gap: 15px;
+
+    padding: 40px 0;
+  }
+
+  .project-case-number {
+    font-size: 0.75rem;
+  }
+
+  .project-case-study-content article h3 {
+    font-size: 1.8rem;
+  }
+
+  .project-case-study-content article p {
+    font-size: 1rem;
+  }
+
+  /* OLD SECTIONS */
+
+  .project-detail-section {
+    margin: 80px auto;
+  }
+
+  .project-section-content h2 {
+    font-size: 2rem;
+  }
+
+  .project-section-content p {
+    font-size: 1rem;
+  }
+
+  .project-detail-action {
+    width: 88%;
+  }
+
+  .back-link {
+    left: 6vw;
+    top: 20px;
+  }
+}

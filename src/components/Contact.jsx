@@ -13,6 +13,18 @@ export default function Contact() {
     animRef.current = node
   }, [animRef])
 
+  const handleRipple = useCallback((e) => {
+    const btn = e.currentTarget
+    const rect = btn.getBoundingClientRect()
+    const ripple = document.createElement('span')
+    ripple.className = 'ripple-effect'
+    ripple.style.left = `${e.clientX - rect.left}px`
+    ripple.style.top = `${e.clientY - rect.top}px`
+    ripple.style.width = ripple.style.height = '20px'
+    btn.appendChild(ripple)
+    setTimeout(() => ripple.remove(), 600)
+  }, [])
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (!formRef.current) return
@@ -24,9 +36,11 @@ export default function Contact() {
       setStatus({ text: '✅ ¡Mensaje enviado!', disabled: true })
       formRef.current.reset()
       setTimeout(() => setStatus({ text: '✉ Enviar mensaje', disabled: false }), 3000)
-    } catch {
-      setStatus({ text: '❌ Error al enviar', disabled: true })
-      setTimeout(() => setStatus({ text: '✉ Enviar mensaje', disabled: false }), 3000)
+    } catch (err) {
+      console.error('EmailJS error:', err)
+      const msg = err?.text || err?.message || 'Error al enviar'
+      setStatus({ text: `❌ ${msg}`, disabled: true })
+      setTimeout(() => setStatus({ text: '✉ Enviar mensaje', disabled: false }), 5000)
     }
   }
 
@@ -40,37 +54,43 @@ export default function Contact() {
       <div className="contact-inner">
         <div className="contact-left fade-up" ref={leftRef}>
           <div className="contact-info">
-            <div className="contact-info-item"><span className="ci-icon">📍</span> Gran Canaria, España</div>
-            <div className="contact-info-item"><span className="ci-icon">✉️</span> ithaisasanchezgonzalez@gmail.com</div>
-            <div className="contact-info-item"><span className="ci-icon">📞</span> +34 672 075 340</div>
+            {[
+              { icon: '📍', text: 'Gran Canaria, España' },
+              { icon: '✉️', text: 'ithaisasanchezgonzalez@gmail.com' },
+              { icon: '📞', text: '+34 672 075 340' },
+            ].map((item) => (
+              <div className="contact-info-item card-hover-lift" key={item.text} style={{ padding: '8px', borderRadius: 8 }}>
+                <span className="ci-icon">{item.icon}</span> {item.text}
+              </div>
+            ))}
           </div>
         </div>
         <form className="contact-form fade-up" ref={setFormRef} onSubmit={handleSubmit}>
           <div className="form-row">
-            <div className="form-group">
+            <div className="form-group form-group-focus">
               <label>Nombre *</label>
               <input type="text" name="user_name" placeholder="Tu nombre" required />
             </div>
-            <div className="form-group">
+            <div className="form-group form-group-focus">
               <label>Correo electrónico *</label>
               <input type="email" name="user_email" placeholder="tu@email.com" required />
             </div>
           </div>
-          <div className="form-group">
+          <div className="form-group form-group-focus">
             <label>Mensaje *</label>
             <textarea name="message" placeholder="Cuéntame sobre tu proyecto..." required />
           </div>
           <div className="form-row">
-            <div className="form-group">
+            <div className="form-group form-group-focus">
               <label>LinkedIn</label>
               <input type="text" name="linkedin" placeholder="linkedin.com/in/..." />
             </div>
-            <div className="form-group">
+            <div className="form-group form-group-focus">
               <label>Email adicional</label>
               <input type="email" name="additional_email" placeholder="otro@email.com" />
             </div>
           </div>
-          <button type="submit" className="btn-send" disabled={status.disabled}>
+          <button type="submit" className="btn-send btn-ripple" disabled={status.disabled} onClick={handleRipple}>
             {status.text}
           </button>
         </form>

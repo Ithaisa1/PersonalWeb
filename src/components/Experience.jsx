@@ -7,8 +7,8 @@ function TimelineItem({ item }) {
   return (
     <div className={`timeline-item ${item.side} fade-up`} ref={ref}>
       {item.side === 'right' && <div />}
-      <div className="timeline-content">
-        <div className="timeline-dot" />
+      <div className="timeline-content card-hover-lift">
+        <div className="timeline-dot timeline-dot-pulse" />
         <div className="tc-company">{item.company}</div>
         <div className="tc-role">{item.role}</div>
         <div className="tc-period">{item.period}</div>

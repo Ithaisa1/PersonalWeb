@@ -4,14 +4,25 @@ import { testimonials } from '../data/testimonials'
 
 export default function Testimonials() {
   const [current, setCurrent] = useState(0)
+  const [fading, setFading] = useState(false)
   const cardRef = useScrollAnimation()
 
-  const goTo = useCallback((i) => setCurrent(i), [])
+  const changeTestimonial = useCallback((i) => {
+    setFading(true)
+    setTimeout(() => {
+      setCurrent(i)
+      setFading(false)
+    }, 300)
+  }, [])
+
+  const goTo = useCallback((i) => changeTestimonial(i), [changeTestimonial])
 
   useEffect(() => {
-    const id = setInterval(() => setCurrent((c) => (c + 1) % testimonials.length), 5000)
+    const id = setInterval(() => {
+      changeTestimonial((current + 1) % testimonials.length)
+    }, 5000)
     return () => clearInterval(id)
-  }, [])
+  }, [current, changeTestimonial])
 
   const t = testimonials[current]
 
@@ -23,18 +34,25 @@ export default function Testimonials() {
       </div>
       <div className="testimonial-wrap">
         <div className="testimonial-card fade-up" ref={cardRef}>
-          <blockquote id="testimonial-text">&ldquo;{t.text}&rdquo;</blockquote>
-          <div className="testimonial-author">
-            <div className="author-avatar">{t.initials}</div>
-            <div>
-              <div className="author-name">{t.name}</div>
-              <div className="author-role">{t.role}</div>
+          <div className={`testimonial-fade${fading ? ' fading' : ''}`}>
+            <blockquote>&ldquo;{t.text}&rdquo;</blockquote>
+            <div className="testimonial-author">
+              <div className="author-avatar" style={{ animation: 'pulse-glow 2s ease-in-out infinite' }}>{t.initials}</div>
+              <div>
+                <div className="author-name">{t.name}</div>
+                <div className="author-role">{t.role}</div>
+              </div>
             </div>
           </div>
         </div>
         <div className="testimonial-dots">
           {testimonials.map((_, i) => (
-            <div key={i} className={`dot${i === current ? ' active' : ''}`} onClick={() => goTo(i)} />
+            <div
+              key={i}
+              className={`dot${i === current ? ' active' : ''}`}
+              onClick={() => goTo(i)}
+              style={{ transition: 'all 0.3s ease', transform: i === current ? 'scale(1.4)' : 'scale(1)' }}
+            />
           ))}
         </div>
         <div className="testimonial-cta">

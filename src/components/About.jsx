@@ -21,11 +21,11 @@ export default function About() {
           <p>Me apasiona cuando puedo combinar creatividad con estrategia para crear páginas web que no sólo se vean bien, sino que realmente <strong>conviertan y crezcan</strong> con cada cliente.</p>
           <p>Mi formación en Desarrollo de Aplicaciones Web, certificaciones en marketing digital e IA generativa y el programa Diginnova me han permitido trabajar en proyectos reales de mejora de visibilidad online y experiencia de usuario.</p>
           <p>Para mí, una web no es solo diseño: es estrategia, rendimiento y usabilidad. Me apasiona el UX/UI porque la sencillez bien ejecutada es lo que convierte visitas en resultados.</p>
-          <a href="#contact" className="btn-primary" style={{ marginTop: 24, display: 'inline-block' }}>Hablemos de tu proyecto</a>
+          <a href="#contact" className="btn-primary btn-ripple" style={{ marginTop: 24, display: 'inline-block' }}>Hablemos de tu proyecto</a>
         </div>
-        <div className="about-right fade-up" ref={rightRef}>
+        <div className="about-right stagger-children fade-up" ref={rightRef}>
           {items.map((item) => (
-            <div className="about-item" key={item.title}>
+            <div className="about-item card-hover-lift" key={item.title} style={{ padding: '8px', borderRadius: 12 }}>
               <div className="about-icon">{item.icon}</div>
               <div>
                 <h4>{item.title}</h4>

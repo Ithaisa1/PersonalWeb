@@ -1,0 +1,353 @@
+.demo-page {
+  min-height: 100vh;
+  padding: 120px 24px 80px;
+  background: var(--bg, #0a0a0a);
+  color: var(--text, #ffffff);
+}
+
+.demo-container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+/* --------------------------------
+   BACK
+-------------------------------- */
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 60px;
+
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+
+  font-size: 14px;
+  transition: color 0.25s ease;
+}
+
+.back-link:hover {
+  color: #ffffff;
+}
+
+/* --------------------------------
+   HERO
+-------------------------------- */
+
+.demo-hero {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 80px;
+}
+
+.demo-label {
+  display: inline-block;
+  margin-bottom: 18px;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+
+  color: #4f8cff;
+}
+
+.demo-hero h1 {
+  margin: 0 0 20px;
+
+  font-size: clamp(42px, 7vw, 80px);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.demo-description {
+  max-width: 650px;
+  margin: 0 auto;
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* --------------------------------
+   BUTTONS
+-------------------------------- */
+
+.demo-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+
+  margin-top: 35px;
+}
+
+.demo-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  padding: 0 24px;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.demo-button:hover {
+  transform: translateY(-2px);
+}
+
+.demo-button.primary {
+  background: #4f8cff;
+  color: #ffffff;
+}
+
+.demo-button.primary:hover {
+  background: #3a78f0;
+}
+
+.demo-button.secondary {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.demo-button.secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* --------------------------------
+   PREVIEW
+-------------------------------- */
+
+.demo-preview {
+  margin-bottom: 80px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  background: #111111;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.35);
+}
+
+.demo-preview-header {
+  display: flex;
+  align-items: center;
+
+  height: 46px;
+  padding: 0 18px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: rgba(255, 255, 255, 0.03);
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.demo-preview-content {
+  min-height: 600px;
+  position: relative;
+}
+
+/* --------------------------------
+   IFRAME
+-------------------------------- */
+
+.demo-iframe {
+  display: block;
+
+  width: 100%;
+  height: 650px;
+
+  border: none;
+
+  background: #ffffff;
+}
+
+/* --------------------------------
+   PLACEHOLDER
+-------------------------------- */
+
+.demo-placeholder {
+  min-height: 600px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  text-align: center;
+}
+
+.demo-placeholder-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 70px;
+  height: 70px;
+
+  margin-bottom: 24px;
+
+  border-radius: 50%;
+
+  background: rgba(79, 140, 255, 0.1);
+
+  color: #4f8cff;
+
+  font-size: 28px;
+}
+
+.demo-placeholder h2 {
+  margin: 0 0 12px;
+
+  font-size: 28px;
+}
+
+.demo-placeholder p {
+  max-width: 500px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  line-height: 1.7;
+}
+
+/* --------------------------------
+   INFO
+-------------------------------- */
+
+.demo-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+
+  padding-top: 50px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.demo-info-label {
+  display: block;
+
+  margin-bottom: 14px;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.demo-info h2 {
+  margin: 0;
+
+  font-size: 28px;
+}
+
+.demo-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.demo-tech {
+  padding: 8px 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* --------------------------------
+   NOT FOUND
+-------------------------------- */
+
+.demo-empty {
+  min-height: 60vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.demo-empty-icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.demo-empty h1 {
+  margin: 0 0 12px;
+}
+
+.demo-empty p {
+  margin-bottom: 30px;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* --------------------------------
+   RESPONSIVE
+-------------------------------- */
+
+@media (max-width: 700px) {
+
+  .demo-page {
+    padding: 100px 18px 60px;
+  }
+
+  .demo-hero {
+    margin-bottom: 60px;
+  }
+
+  .demo-description {
+    font-size: 16px;
+  }
+
+  .demo-preview-content {
+    min-height: 450px;
+  }
+
+  .demo-iframe {
+    height: 500px;
+  }
+
+  .demo-placeholder {
+    min-height: 450px;
+  }
+
+  .demo-info {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+}
